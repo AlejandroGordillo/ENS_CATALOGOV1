@@ -235,6 +235,10 @@
                 <a href="#" class="hover:text-indigo-400">Términos de Servicio</a>
                 <a href="#" class="hover:text-indigo-400">Contacto</a>
             </div>
+            <p class="disclaimer-text mt-6">
+                <strong>Nota:</strong> Esta página web y la entidad "Pixelversidad" son parte de un proyecto educativo y de demostración.
+                La información presentada aquí, incluyendo cursos, precios y la empresa misma, no son reales y se utilizan únicamente con fines ilustrativos.
+            </p>
         </div>
     </footer>
 
@@ -249,14 +253,6 @@
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Add offset for sticky header if needed
-                    // const headerOffset = document.querySelector('header').offsetHeight;
-                    // const elementPosition = targetElement.getBoundingClientRect().top;
-                    // const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    // window.scrollTo({
-                    //      top: offsetPosition,
-                    //      behavior: "smooth"
-                    // });
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
