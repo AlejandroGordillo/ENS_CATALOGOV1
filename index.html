@@ -13,6 +13,7 @@
         .hero-bg {
             background-color: #1a202c; /* Dark blue-gray */
             background-image: linear-gradient(to bottom right, #1a202c, #2d3748); /* Subtle gradient */
+            /* Removed custom background image properties */
         }
         .cta-button {
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -27,7 +28,6 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        /* Custom gradient for buttons */
         .btn-primary-gradient {
             background-image: linear-gradient(to right, #4F46E5, #7C3AED); /* Indigo to Purple */
         }
@@ -45,18 +45,57 @@
         }
         .pricing-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e5e7eb; /* Agrega un borde sutil */
+            border: 1px solid #e5e7eb; 
         }
         .pricing-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.5); /* Sombra más pronunciada en hover */
+            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.5); 
         }
         .pricing-card.popular {
-            border-color: #4F46E5; /* Borde destacado para el plan popular */
-            transform: scale(1.05); /* Ligeramente más grande */
+            border-color: #4F46E5; 
+            transform: scale(1.05); 
         }
         .pricing-card.popular:hover {
-             transform: scale(1.08) translateY(-5px); /* Aún más grande en hover */
+             transform: scale(1.08) translateY(-5px); 
+        }
+        .disclaimer-text {
+            font-size: 0.8rem; 
+            color: #a0aec0; 
+            margin-top: 1rem;
+        }
+        /* Simple Testimonial Styles */
+        .testimonial-simple-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-simple-text {
+            font-style: italic;
+            color: #4b5563; /* Gray-700 */
+            margin-bottom: 1rem; /* 16px */
+            font-size: 0.9rem; 
+            line-height: 1.6;
+        }
+        .testimonial-simple-author {
+            font-weight: 600; /* Semibold */
+            color: #1f2937; /* Gray-800 */
+            font-size: 0.9rem;
+            margin-top: auto; /* Pushes author to the bottom */
+        }
+        .testimonial-simple-role {
+            font-size: 0.8rem; 
+            color: #6b7280; /* Gray-500 */
+        }
+        .testimonial-simple-avatar {
+            width: 56px; /* 3.5rem */
+            height: 56px; /* 3.5rem */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem; /* 16px */
+            align-self: center;
         }
     </style>
 </head>
@@ -69,14 +108,15 @@
                 <a href="#nosotros" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
                 <a href="#cursos" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cursos</a>
                 <a href="#publico" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">¿Para Quién?</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Testimonios</a>
                 <a href="#precios" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Precios</a>
                 <a href="#contacto" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium cta-button">Inscríbete</a>
             </div>
         </nav>
     </header>
 
-    <section class="hero-bg text-white py-20 md:py-32">
-        <div class="container mx-auto px-6 text-center">
+    <section class="hero-bg text-white py-20 md:py-32 relative">
+        <div class="container mx-auto px-6 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Bienvenido a Pixelversidad</h1>
             <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto">Tu plataforma de educación en línea especializada en habilidades de programación para el mercado latinoamericano.</p>
             <p class="text-md md:text-xl mb-10 max-w-2xl mx-auto">Abordamos la creciente demanda de profesionales tecnológicos y la necesidad de educación accesible y de calidad.</p>
@@ -102,7 +142,7 @@
                     <p class="text-gray-600">Contenido actualizado y profesores expertos para asegurar tu aprendizaje.</p>
                 </div>
                 <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <svg class="w-16 h-16 text-indigo-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <svg class="w-16 h-16 text-indigo-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     <h3 class="text-xl font-semibold mb-2 text-gray-700">Comunidad Vibrante</h3>
                     <p class="text-gray-600">Conéctate con otros estudiantes y profesionales del sector.</p>
                 </div>
@@ -115,7 +155,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 section-title-underline">Nuestros Cursos Estrella</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden feature-card">
-                    <img src="https://placehold.co/600x400/6366F1/FFFFFF?text=Desarrollo+Web" alt="[Imagen de curso de Desarrollo Web]" class="w-full h-48 object-cover">
+                    <img src="https://placehold.co/600x400/6366F1/FFFFFF?text=Código+Web+Moderno" alt="[Imagen de código en un editor para Desarrollo Web]" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-indigo-700">Desarrollo Web Completo</h3>
                         <p class="text-gray-600 mb-4">Aprende a crear aplicaciones web modernas y dinámicas, desde el frontend hasta el backend. Domina HTML, CSS, JavaScript, React, Node.js y más.</p>
@@ -123,7 +163,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden feature-card">
-                    <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Ciencia+de+Datos" alt="[Imagen de curso de Ciencia de Datos]" class="w-full h-48 object-cover">
+                    <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Gráficas+y+Datos" alt="[Imagen de gráficas y visualizaciones de datos para Ciencia de Datos]" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-purple-700">Ciencia de Datos e IA</h3>
                         <p class="text-gray-600 mb-4">Sumérgete en el análisis de datos, machine learning e inteligencia artificial. Transforma datos en decisiones estratégicas con Python y R.</p>
@@ -131,7 +171,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-xl overflow-hidden feature-card">
-                    <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Desarrollo+Móvil" alt="[Imagen de curso de Desarrollo Móvil]" class="w-full h-48 object-cover">
+                    <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Apps+en+Teléfono" alt="[Imagen de interfaces de aplicaciones móviles en un teléfono para Desarrollo Móvil]" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-pink-700">Desarrollo de Apps Móviles</h3>
                         <p class="text-gray-600 mb-4">Crea aplicaciones móviles nativas e híbridas para iOS y Android. Aprende Swift, Kotlin, React Native o Flutter y publica tu propia app.</p>
@@ -150,7 +190,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 section-title-underline">¿A Quién Nos Dirigimos?</h2>
             <div class="max-w-3xl mx-auto bg-indigo-50 p-8 md:p-12 rounded-xl shadow-lg">
                 <div class="flex items-center mb-6">
-                    <svg class="w-12 h-12 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <svg class="w-12 h-12 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     <h3 class="text-2xl font-semibold text-gray-700">Jóvenes Profesionales y Estudiantes (18-35 años)</h3>
                 </div>
                 <p class="text-gray-600 text-lg mb-4">
@@ -165,6 +205,38 @@
                 <p class="text-gray-600 text-lg mt-6">
                     Si tienes la motivación y el deseo de crecer en el mundo digital, ¡Pixelversidad es para ti!
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 section-title-underline">Lo Que Dicen Nuestros Alumnos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-simple-card">
+                    <img src="https://placehold.co/56x56/4F46E5/FFFFFF?text=AP" alt="[Avatar de Ana Pérez]" class="testimonial-simple-avatar">
+                    <p class="testimonial-simple-text">"Pixelversidad transformó mi carrera. El curso de Desarrollo Web Completo me dio las herramientas para conseguir el trabajo de mis sueños como desarrolladora frontend. ¡Totalmente recomendado!"</p>
+                    <div>
+                        <p class="testimonial-simple-author">Ana Pérez</p>
+                        <p class="testimonial-simple-role">Desarrolladora Frontend Jr.</p>
+                    </div>
+                </div>
+                <div class="testimonial-simple-card">
+                    <img src="https://placehold.co/56x56/7C3AED/FFFFFF?text=CL" alt="[Avatar de Carlos López]" class="testimonial-simple-avatar">
+                    <p class="testimonial-simple-text">"Siempre me interesó la Ciencia de Datos, pero no sabía por dónde empezar. Gracias a Pixelversidad, ahora entiendo los conceptos clave y puedo aplicar mis conocimientos en proyectos reales."</p>
+                    <div>
+                        <p class="testimonial-simple-author">Carlos López</p>
+                        <p class="testimonial-simple-role">Estudiante de Ciencia de Datos</p>
+                    </div>
+                </div>
+                <div class="testimonial-simple-card md:col-span-2 lg:col-span-1">
+                    <img src="https://placehold.co/56x56/DB2777/FFFFFF?text=SG" alt="[Avatar de Sofía Gómez]" class="testimonial-simple-avatar">
+                    <p class="testimonial-simple-text">"Logré publicar mi primera app gracias al curso de Desarrollo Móvil. El contenido es práctico y muy bien explicado. El soporte de la comunidad también fue fundamental. ¡La calidad de los instructores es increíble!"</p>
+                    <div>
+                        <p class="testimonial-simple-author">Sofía Gómez</p>
+                        <p class="testimonial-simple-role">Desarrolladora de Apps Independiente</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -217,8 +289,8 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-20 md:py-32 hero-bg text-white">
-        <div class="container mx-auto px-6 text-center">
+    <section id="contacto" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-3xl md:text-5xl font-bold mb-6">¿Listo para Transformar tu Futuro?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Únete a la comunidad de Pixelversidad y da el primer paso hacia una carrera exitosa en tecnología. La demanda de talento es alta, y las oportunidades son enormes.</p>
             <a href="#" class="bg-white text-indigo-700 font-semibold px-10 py-4 rounded-lg text-lg cta-button hover:bg-gray-100 inline-block">¡Inscríbete Ahora!</a>
